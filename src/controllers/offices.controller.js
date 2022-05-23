@@ -1,3 +1,4 @@
+const Office = require('../config/database/models/offices.model');
 const officesService = require('../services/offices.service');
 
 const getAllOffices = async (req, res) => {
@@ -27,6 +28,7 @@ const createOffice = async (req, res) => {
       message: 'Create one office',
     });
   } catch (error) {
+    console.log(error);
     return res.status(500).json({
       statusCode: 500,
       success: false,
