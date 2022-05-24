@@ -1,4 +1,3 @@
-const Office = require('../config/database/models/offices.model');
 const officesService = require('../services/offices.service');
 
 const getAllOffices = async (req, res) => {
@@ -28,7 +27,6 @@ const createOffice = async (req, res) => {
       message: 'Create one office',
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       statusCode: 500,
       success: false,
@@ -43,7 +41,7 @@ const deleteAllOffices = async (req, res) => {
     res.status(200).json({
       statusCode: 200,
       success: true,
-      message: 'Delete all customers',
+      message: 'Delete all offices',
     });
   } catch (error) {
     return res.status(500).json({
@@ -72,7 +70,7 @@ const getOneOffice = async (req, res) => {
       });
     }
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       statusCode: 500,
       success: false,
       message: `${error}`,

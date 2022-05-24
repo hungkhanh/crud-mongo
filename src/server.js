@@ -10,8 +10,12 @@ app.use(express.urlencoded({extended: true}));
 mongoose.connect(process.env.MONGO_URL);
 
 const officesRouter = require('./routes/offices.router');
+const customersRouter = require('./routes/customers.router');
+const employeesRouter = require('./routes/employees.router');
 
 app.use('/offices', officesRouter);
+app.use('/customers', customersRouter);
+app.use('/employees', employeesRouter);
 
 // test api
 app.get('/', (req, res) => {

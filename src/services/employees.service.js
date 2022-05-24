@@ -1,16 +1,28 @@
 const Employee = require('../config/database/models/employees.model');
 
-const findAll = async () => {};
+const findAll = async () => {
+  return await Employee.find({});
+};
 
-const create = async (data) => {};
+const create = async (data) => {
+  return await Employee.create(data);
+};
 
-const deleteAll = async () => {};
+const deleteAll = async () => {
+  return await Employee.deleteMany({});
+};
 
-const findOne = async (id) => {};
+const findOne = async (id) => {
+  return await Employee.findById(id);
+};
 
-const update = async (id, data) => {};
+const update = async (id, data) => {
+  return await Employee.findOneAndUpdate({_id: id}, data);
+};
 
-const deleteOne = async (id) => {};
+const deleteOne = async (id) => {
+  return await Employee.findOneAndDelete({_id: id});
+};
 
 module.exports = {
   findAll,
