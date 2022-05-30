@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "6862447e-2920-485e-a1bb-8587aaca9549",
+		"name": "Offices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14939235"
+	},
+	"item": [
+		{
+			"name": "get all offices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create one office",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city",
+							"value": "city2",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123456789",
+							"type": "text"
+						},
+						{
+							"key": "addressLine1",
+							"value": "addr1",
+							"type": "text"
+						},
+						{
+							"key": "addressLine2",
+							"value": "addr2",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "territory",
+							"value": "No",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/offices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all offices",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one office",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices/628b8d9cb1136b02fbcefe6d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"628b8d9cb1136b02fbcefe6d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update or create office",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city",
+							"value": "city9",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123456789",
+							"type": "text"
+						},
+						{
+							"key": "addressLine1",
+							"value": "addr1",
+							"type": "text"
+						},
+						{
+							"key": "addressLine2",
+							"value": "addr2",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "territory",
+							"value": "No",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/offices/628b8d9cb1136b02fbcefe45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"628b8d9cb1136b02fbcefe45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update office",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city",
+							"value": "city vipppp",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0123456789",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "addressLine1",
+							"value": "addr1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "addressLine2",
+							"value": "addr2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "postalCode",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "territory",
+							"value": "No",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/offices/628b8da0b1136b02fbcefe6f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"628b8da0b1136b02fbcefe6f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one office",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices/628b8da0b1136b02fbcefe6f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"628b8da0b1136b02fbcefe6f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices/62947afd896efcac58906363/listEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"62947afd896efcac58906363",
+						"listEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/offices/62947afd896efcac58906363/listCustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"offices",
+						"62947afd896efcac58906363",
+						"listCustomers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

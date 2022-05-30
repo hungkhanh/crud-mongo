@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "0f2990e9-96e0-4fac-afa5-898c8b530de0",
+		"name": "Customers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14939235"
+	},
+	"item": [
+		{
+			"name": "get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create one customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customerName",
+							"value": "username3",
+							"type": "text"
+						},
+						{
+							"key": "contactLastName",
+							"value": "last",
+							"type": "text"
+						},
+						{
+							"key": "contactFirstName",
+							"value": "first",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "phone",
+							"type": "text"
+						},
+						{
+							"key": "addressLine1",
+							"value": "addr1",
+							"type": "text"
+						},
+						{
+							"key": "addressLine2",
+							"value": "addr2",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "city",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "postal",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "VN",
+							"type": "text"
+						},
+						{
+							"key": "salesRepEmployeeId",
+							"value": "62947f6c1796501639586f5a",
+							"type": "text"
+						},
+						{
+							"key": "creditLimit",
+							"value": "9999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all customers",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers/629485d21796501639586f6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"629485d21796501639586f6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update or create customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update customer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
