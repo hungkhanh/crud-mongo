@@ -24,6 +24,14 @@ const deleteOne = async (id) => {
   return await Employee.findOneAndDelete({_id: id});
 };
 
+const findByReportsTo = async (id) => {
+  return await Employee.find({reportsTo: id});
+};
+
+const findByOfficeCode = async (id) => {
+  return await Employee.find({officeCode: id});
+};
+
 module.exports = {
   findAll,
   create,
@@ -32,4 +40,7 @@ module.exports = {
   findOne,
   update,
   deleteOne,
+
+  findByReportsTo,
+  findByOfficeCode,
 };

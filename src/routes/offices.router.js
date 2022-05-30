@@ -10,4 +10,7 @@ router.put('/:officeId', offcidesController.updateOrCreateOffice);
 router.patch('/:officeId', offcidesController.updateOffice);
 router.delete('/:officeId', offcidesController.deleteOneOffice);
 
+router.get('/:officeId/listEmployees', offcidesController.listEmployees);
+router.get('/:officeId/listCustomers', offcidesController.listCustomers);
+
 module.exports = router;

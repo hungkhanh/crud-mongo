@@ -54,7 +54,7 @@ const deleteAllCustomers = async (req, res) => {
 
 const getOneCustomer = async (req, res) => {
   try {
-    const id = req.params.officeId;
+    const id = req.params.customerId;
     const customer = await customersService.findOne(id);
     if (customer) {
       res.status(200).json({

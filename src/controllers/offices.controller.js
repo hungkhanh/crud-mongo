@@ -1,4 +1,6 @@
 const officesService = require('../services/offices.service');
+const employeesService = require('../services/employees.service');
+const customersService = require('../services/customers.service');
 
 const getAllOffices = async (req, res) => {
   try {
@@ -162,6 +164,64 @@ const deleteOneOffice = async (req, res) => {
   }
 };
 
+const listEmployees = async (req, res) => {
+  try {
+    const id = req.params.officeId;
+    const office = await officesService.findOne(id);
+    if (office) {
+      const employees = await employeesService.findByOfficeCode(id);
+      res.status(200).json({
+        statusCode: 200,
+        success: true,
+        data: employees,
+      });
+    } else {
+      res.status(404).json({
+        statusCode: 404,
+        success: false,
+        message: 'Not Found',
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({
+      statusCode: 500,
+      success: false,
+      message: `${error}`,
+    });
+  }
+};
+
+const listCustomers = async (req, res) => {
+  try {
+    const id = req.params.officeId;
+    const office = await officesService.findOne(id);
+    if (office) {
+      const employees = await employeesService.findByOfficeCode(id);
+      let customers = await Promise.all(
+        employees.map((e) => customersService.findByEmployee(e.id)),
+      );
+      customers = customers.flat();
+      res.status(200).json({
+        statusCode: 200,
+        success: true,
+        data: customers,
+      });
+    } else {
+      res.status(404).json({
+        statusCode: 404,
+        success: false,
+        message: 'Not Found',
+      });
+    }
+  } catch (error) {
+    return res.status(500).json({
+      statusCode: 500,
+      success: false,
+      message: `${error}`,
+    });
+  }
+};
+
 module.exports = {
   getAllOffices,
   createOffice,
@@ -171,4 +231,7 @@ module.exports = {
   updateOrCreateOffice,
   updateOffice,
   deleteOneOffice,
+
+  listEmployees,
+  listCustomers,
 };

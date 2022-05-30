@@ -10,4 +10,7 @@ router.put('/:employeeId', employeesController.updateOrCreateEmployee);
 router.patch('/:employeeId', employeesController.updateEmployee);
 router.delete('/:employeeId', employeesController.deleteOneEmployee);
 
+router.get('/:employeeId/listCustomers', employeesController.listCustomers);
+router.get('/:employeeId/listStaffs', employeesController.listStaffs);
+
 module.exports = router;
